@@ -1,18 +1,16 @@
 // Player has three potential choices: rock, paper, or scissors
-
 let rock = "rock" 
 let paper = "paper"
 let scissors = "scissors"
 
-let tie = 0 
 let win = 0 
+let tie = 0 
 let lose = 0
 
 // Computer also has three choices, determined by a randomized number from 0-2
 let options = [rock,paper,scissors];
 
 // Convert randomized number to rock, paper, or scissors
-
 function convertComputerChoice(getComputerChoice){
     if (getComputerChoice === 0){
         return rock;
@@ -29,6 +27,7 @@ function playRound () {
     let getComputerChoice = Math.floor(Math.random() * options.length);
     let computerChoice = convertComputerChoice(getComputerChoice)
     console.log(computerChoice)
+
 // If user chooses rock
     if (userChoice.toLowerCase() === "rock" && computerChoice === rock) {
         console.log("it's a tie! Rock vs Rock")
@@ -82,15 +81,14 @@ function game() {
 } 
 game()
 
-function printResult() {
+function printResult(){
     if (win > lose ) {
-        console.log("Congrats! You win bud")
-    } 
+        console.log("Nice job bud! You won");
+    }
     else if (lose > win) {
-        console.log("Yikes! You lost pal")
+        console.log("Yikes! You lost pal");
     }
     else {
-        console.log("Snoozefest! You tied")
+        console.log("Snoozefest! You tied");
     }
 }
-
